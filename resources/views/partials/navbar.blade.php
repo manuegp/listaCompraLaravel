@@ -16,7 +16,7 @@
                         </a>
                     </li>
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/catalog/create')}}">
+                        <a class="nav-link" href="{{url('/productos/create')}}">
                             <span>&#10010</span> Nueva película
                         </a>
                     </li>
