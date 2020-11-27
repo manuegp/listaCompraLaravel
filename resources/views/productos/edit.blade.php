@@ -2,6 +2,6 @@
 
 @section('content')
 
-	Editar producto
+	Editar producto  {{ $id }}
 
 @stop
