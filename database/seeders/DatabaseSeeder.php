@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Producto;
-
+use App\Models\User;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
 
     public function run()
 {
+  self::seedUsers();
+  
   self::seedProductos();
   $this->command->info('Tabla productos inicializada con datos!');
 }
@@ -32,6 +34,27 @@ private static function seedProductos()
 		}
     }
 
+
+private static function seedUsers()
+    {
+        User::truncate();
+        
+        $usuario1 = new User();
+        $usuario1->name = 'Manuel';
+        $usuario1->apellidos = 'Gonzalez';
+        $usuario1->email = 'manuel.mgp.2001@gmail.com';
+        $usuario1->password = bcrypt('12345678');
+        $usuario1->save();
+
+        $usuario2 = User::create([
+            'name' => 'Otro usuario',
+            'apellidos' => 'Otro usuario apellido',
+            'email' => 'otroUsuario@murciaeduca.es',
+            'password' => bcrypt('otroUsuario'),
+        ]);
+
+
+    }
 	private static $arrayProductos = array(
 array('Aceite','Aceites y grasas'),
 array('Aceite de oliva','Aceites y grasas'),

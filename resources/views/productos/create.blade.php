@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -16,27 +16,27 @@
 
 	            <div class="form-group">
 	               <label for="nombre">Nombre</label>
-	               <input type="text" name="nombre" id="nombre" class="form-control">
+	               <input type="text" name="nombre" id="nombre" class="form-control" >
 	            </div>
 
 	            <div class="form-group">
 	            	<label for="precio">Precio</label>
-	               <input type="number" name="precio" id="precio">
+	               <input type="number" name="precio" id="precio" >
 	            </div>
 
 	            <div class="form-group">
 	            	<label for="categoria">Categoria</label>
-	               <input type="text" name="categoria" id="categoria" class="form-control">
+	               <input type="text" name="categoria" id="categoria" class="form-control" >
 	            </div>
 
 	            <div class="form-group">
 	            	<label for="imagen">Imagen</label>
-	               <input type="text" name="imagen" id="imagen" class="form-control">
+	               <input type="text" name="imagen" id="imagen" class="form-control" >
 	            </div>
 
 	            <div class="form-group">
 	               <label for="descripcion">Descripcion</label>
-	               <textarea name="descripcion" id="descripcion" class="form-control" rows="3"></textarea>
+	               <textarea name="descripcion" id="descripcion" class="form-control" rows="3" ></textarea>
 	            </div>
 
 	            <div class="form-group text-center">
